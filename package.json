@@ -1,0 +1,8 @@
+{
+  "name": "moas-pallets",
+  "version": "1.0.0",
+  "description": "Grupo Moas — Controle de Estoque de Pallets",
+  "dependencies": {
+    "@vercel/kv": "^1.0.0"
+  }
+}

@@ -1,0 +1,101 @@
+================================================================
+GRUPO MOAS TRANSPORTE
+Guia de Deploy — Vercel (5 minutos)
+================================================================
+
+O QUE VOCÊ VAI RECEBER
+-----------------------
+Pasta: moas-vercel/
+├── vercel.json          → configuração do Vercel
+├── package.json         → dependências
+├── api/
+│   └── dados.js         → banco de dados (backend)
+└── public/
+    ├── index.html       → o app completo
+    └── manifest.json    → configuração do app mobile
+
+PASSO 1 — CRIAR CONTA NO VERCEL (2 min)
+-----------------------------------------
+1. Acesse: vercel.com
+2. Clique em "Sign Up"
+3. Escolha "Continue with GitHub" (crie uma conta GitHub se não tiver)
+4. Autorize o Vercel a acessar sua conta GitHub
+
+PASSO 2 — SUBIR O PROJETO (2 min)
+------------------------------------
+Opção A — Pelo site (mais fácil):
+1. Na tela inicial do Vercel, clique em "Add New Project"
+2. Clique em "Import" > "Upload Files"
+3. Arraste a pasta inteira "moas-vercel" para a área de upload
+4. Clique em "Deploy"
+5. Aguarde 1-2 minutos → o Vercel gera a URL automaticamente
+
+Opção B — Pelo terminal (para quem conhece Git):
+1. Instale o Vercel CLI: npm install -g vercel
+2. Na pasta moas-vercel, rode: vercel
+3. Siga as instruções no terminal
+4. URL gerada automaticamente
+
+PASSO 3 — ATIVAR O BANCO DE DADOS KV (1 min)
+-----------------------------------------------
+O banco de dados Vercel KV é gratuito e armazena os dados
+compartilhados entre todos os usuários.
+
+1. No painel do Vercel, abra o projeto publicado
+2. Clique na aba "Storage"
+3. Clique em "Create Database"
+4. Escolha "KV" (Redis)
+5. Dê o nome: moas-pallets-db
+6. Clique em "Create & Continue"
+7. Clique em "Connect to Project"
+8. Selecione seu projeto e clique em "Connect"
+9. Clique em "Redeploy" para aplicar as variáveis de ambiente
+
+PASSO 4 — CONFIGURAR DOMÍNIO PERSONALIZADO (opcional)
+-------------------------------------------------------
+Por padrão a URL será algo como: moas-pallets.vercel.app
+Para usar um domínio próprio (ex: pallets.grupomoas.com.br):
+
+1. No painel do Vercel, vá em Settings > Domains
+2. Digite: pallets.grupomoas.com.br
+3. O Vercel mostrará um registro CNAME para adicionar no DNS
+4. Acesse o painel DNS do domínio da Grupo Moas
+5. Adicione o registro CNAME fornecido
+6. Aguarde até 24h para propagar (geralmente 5-10 min)
+
+RESULTADO FINAL
+---------------
+✅ URL pública: https://moas-pallets.vercel.app
+   (ou seu domínio personalizado)
+
+✅ Funciona em qualquer celular ou computador
+   sem instalar nada, sem login obrigatório
+
+✅ Dados compartilhados em tempo real entre
+   todos os colaboradores
+
+✅ Atualiza automaticamente a cada 30 segundos
+
+✅ Custo: R$ 0 (plano gratuito da Vercel)
+
+INSTALAR NO CELULAR COMO APP
+------------------------------
+iPhone:
+1. Abra o Safari e acesse a URL
+2. Toque no botão compartilhar (quadrado com seta)
+3. Toque em "Adicionar à Tela de Início"
+4. O app aparece como ícone na tela inicial
+
+Android:
+1. Abra o Chrome e acesse a URL
+2. Toque nos 3 pontinhos (⋮) no canto superior direito
+3. Toque em "Adicionar à tela inicial"
+4. O app aparece como ícone na tela inicial
+
+SUPORTE
+-------
+Em caso de dúvidas, consulte a documentação:
+- Vercel: vercel.com/docs
+- Vercel KV: vercel.com/docs/storage/vercel-kv
+
+================================================================
